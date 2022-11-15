@@ -16,8 +16,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="ad5-c6-ZNl">
-                                <rect key="frame" x="16" y="257" width="343" height="81"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="avp-HK-dfR">
+                                <rect key="frame" x="16" y="70" width="343" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="30Q-Pe-fYz"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="jAX-mc-mRd">
+                                <rect key="frame" x="16" y="270" width="343" height="81"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="P6K-sB-D7F">
                                         <rect key="frame" x="0.0" y="0.0" width="45" height="81"/>
@@ -42,11 +49,11 @@
                                             </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="45" id="Vrj-cg-Ahu"/>
+                                            <constraint firstAttribute="width" constant="45" id="ScS-G7-8iB"/>
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="q37-1z-Xke">
-                                        <rect key="frame" x="54" y="0.0" width="30" height="81"/>
+                                        <rect key="frame" x="47" y="0.0" width="30" height="81"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I2a-o2-hus">
                                                 <rect key="frame" x="0.0" y="0.0" width="27" height="17"/>
@@ -68,62 +75,61 @@
                                             </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="30" id="pYJ-UY-5RQ"/>
+                                            <constraint firstAttribute="width" constant="30" id="eSm-Cr-tSa"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="8Lc-ff-Udo">
-                                        <rect key="frame" x="93" y="0.0" width="250" height="81"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VrN-AL-e7i">
+                                        <rect key="frame" x="79" y="0.0" width="264" height="81"/>
                                         <subviews>
-                                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="OQ9-5D-smd">
-                                                <rect key="frame" x="-2" y="0.0" width="254" height="14.666666666666666"/>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="WFJ-e5-yLt">
+                                                <rect key="frame" x="-2" y="0.0" width="268" height="18"/>
                                                 <color key="tintColor" systemColor="systemRedColor"/>
                                                 <connections>
-                                                    <action selector="rgbSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="0bO-Cv-4Mq"/>
+                                                    <action selector="rgbSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="INA-5s-VLZ"/>
                                                 </connections>
                                             </slider>
-                                            <slider opaque="NO" tag="1" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="d3O-oN-Adr">
-                                                <rect key="frame" x="-2" y="25.666666666666686" width="254" height="31"/>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Zv9-Cc-6rd">
+                                                <rect key="frame" x="-2" y="32" width="268" height="18"/>
                                                 <color key="tintColor" systemColor="systemGreenColor"/>
+                                                <connections>
+                                                    <action selector="rgbSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="tpU-BQ-qWR"/>
+                                                </connections>
                                             </slider>
-                                            <slider opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="UQO-z4-t57">
-                                                <rect key="frame" x="-2" y="67.666666666666686" width="254" height="14.333333333333329"/>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="aja-As-gag">
+                                                <rect key="frame" x="-2" y="64" width="268" height="18"/>
+                                                <connections>
+                                                    <action selector="rgbSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="G3g-52-zLC"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="avp-HK-dfR">
-                                <rect key="frame" x="16" y="77" width="343" height="150"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="6oV-4l-rNj"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.13194888376265579" green="0.30797605105427206" blue="0.63714159149484528" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="avp-HK-dfR" secondAttribute="trailing" constant="16" id="Itg-ZH-z9J"/>
-                            <constraint firstItem="avp-HK-dfR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="OC7-Hd-hNl"/>
-                            <constraint firstItem="ad5-c6-ZNl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="XxK-1c-Pby"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ad5-c6-ZNl" secondAttribute="trailing" constant="16" id="cGQ-DZ-1d0"/>
-                            <constraint firstItem="ad5-c6-ZNl" firstAttribute="top" secondItem="avp-HK-dfR" secondAttribute="bottom" constant="30" id="fKq-di-iB6"/>
-                            <constraint firstItem="avp-HK-dfR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="rO5-3A-U7Y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jAX-mc-mRd" secondAttribute="trailing" constant="16" id="BUW-ch-mVQ"/>
+                            <constraint firstItem="jAX-mc-mRd" firstAttribute="top" secondItem="avp-HK-dfR" secondAttribute="bottom" constant="50" id="EXx-fl-We7"/>
+                            <constraint firstItem="jAX-mc-mRd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="FGM-5A-Ncc"/>
+                            <constraint firstItem="avp-HK-dfR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="70" id="QzN-1p-RKy"/>
+                            <constraint firstItem="avp-HK-dfR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="bko-bH-3iO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="avp-HK-dfR" secondAttribute="trailing" constant="16" id="gKq-vS-KlY"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="blueLabel" destination="k8b-Hk-faB" id="fi1-iW-Y0b"/>
-                        <outlet property="blueSlider" destination="UQO-z4-t57" id="ovS-h2-oPz"/>
+                        <outlet property="blueLabel" destination="k8b-Hk-faB" id="iGa-HF-gcI"/>
+                        <outlet property="blueSlider" destination="aja-As-gag" id="hox-yO-JdH"/>
                         <outlet property="colorView" destination="avp-HK-dfR" id="EKl-8a-rtl"/>
-                        <outlet property="greenLabel" destination="FFL-mT-Tap" id="iMB-JR-4I8"/>
-                        <outlet property="greenSlider" destination="d3O-oN-Adr" id="EQl-fG-qH3"/>
-                        <outlet property="redLabel" destination="I2a-o2-hus" id="24i-3T-DsN"/>
-                        <outlet property="redSlider" destination="OQ9-5D-smd" id="QXs-zc-3m8"/>
+                        <outlet property="greenLabel" destination="FFL-mT-Tap" id="sfx-aa-zA3"/>
+                        <outlet property="greenSlider" destination="Zv9-Cc-6rd" id="dpe-CT-9t1"/>
+                        <outlet property="redLabel" destination="I2a-o2-hus" id="L8w-XJ-ecM"/>
+                        <outlet property="redSlider" destination="WFJ-e5-yLt" id="zWI-0n-Rks"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="113.74045801526717" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="112.8" y="-28.078817733990149"/>
         </scene>
     </scenes>
     <resources>

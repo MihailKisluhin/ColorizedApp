@@ -77,12 +77,15 @@
                                             <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="OQ9-5D-smd">
                                                 <rect key="frame" x="-2" y="0.0" width="254" height="14.666666666666666"/>
                                                 <color key="tintColor" systemColor="systemRedColor"/>
+                                                <connections>
+                                                    <action selector="rgbSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="0bO-Cv-4Mq"/>
+                                                </connections>
                                             </slider>
-                                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="d3O-oN-Adr">
+                                            <slider opaque="NO" tag="1" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="d3O-oN-Adr">
                                                 <rect key="frame" x="-2" y="25.666666666666686" width="254" height="31"/>
                                                 <color key="tintColor" systemColor="systemGreenColor"/>
                                             </slider>
-                                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="UQO-z4-t57">
+                                            <slider opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="UQO-z4-t57">
                                                 <rect key="frame" x="-2" y="67.666666666666686" width="254" height="14.333333333333329"/>
                                             </slider>
                                         </subviews>
@@ -109,8 +112,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="blueLabel" destination="k8b-Hk-faB" id="fi1-iW-Y0b"/>
                         <outlet property="blueSlider" destination="UQO-z4-t57" id="ovS-h2-oPz"/>
-                        <outlet property="bluelabel" destination="k8b-Hk-faB" id="fi1-iW-Y0b"/>
                         <outlet property="colorView" destination="avp-HK-dfR" id="EKl-8a-rtl"/>
                         <outlet property="greenLabel" destination="FFL-mT-Tap" id="iMB-JR-4I8"/>
                         <outlet property="greenSlider" destination="d3O-oN-Adr" id="EQl-fG-qH3"/>

@@ -9,7 +9,6 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
-    
     @IBOutlet var colorView: UIView!
     
     @IBOutlet var redLabel: UILabel!
@@ -21,6 +20,8 @@ class SettingsViewController: UIViewController {
     @IBOutlet var blueSlider: UISlider!
     
     var color: UIColor!
+    
+    var delegate: SettingsViewControllerDelegate!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +37,7 @@ class SettingsViewController: UIViewController {
     }
 
     @IBAction func doneButtonPressed() {
+        delegate.setNewColor(newColor: colorView.backgroundColor ?? UIColor.black)
         dismiss(animated: true)
     }
     

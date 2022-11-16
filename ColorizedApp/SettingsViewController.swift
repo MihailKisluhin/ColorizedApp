@@ -20,16 +20,21 @@ class SettingsViewController: UIViewController {
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
     
+    var color: UIColor!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
      
         colorView.layer.cornerRadius = 15
-        
-        setColor()
+        colorView.backgroundColor = color
+        //setColor()
         
         setValue(for: redLabel, greenLabel, blueLabel)
     }
 
+    @IBAction func doneButtonPressed() {
+        dismiss(animated: true)
+    }
     
     @IBAction func rgbSliderAction(_ sender: UISlider) {
         

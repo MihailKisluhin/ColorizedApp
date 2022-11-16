@@ -127,16 +127,29 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iCe-KB-JSc">
+                                <rect key="frame" x="150" y="636" width="75" height="42"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="DONE"/>
+                                <connections>
+                                    <action selector="doneButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="SYm-FV-FxM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.13194888376265579" green="0.30797605105427206" blue="0.63714159149484528" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iCe-KB-JSc" secondAttribute="trailing" constant="150" id="1bd-mn-K4l"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jAX-mc-mRd" secondAttribute="trailing" constant="16" id="BUW-ch-mVQ"/>
                             <constraint firstItem="jAX-mc-mRd" firstAttribute="top" secondItem="avp-HK-dfR" secondAttribute="bottom" constant="50" id="EXx-fl-We7"/>
                             <constraint firstItem="jAX-mc-mRd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="FGM-5A-Ncc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="iCe-KB-JSc" secondAttribute="bottom" constant="100" id="HmC-zL-Vwe"/>
                             <constraint firstItem="avp-HK-dfR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="70" id="QzN-1p-RKy"/>
                             <constraint firstItem="avp-HK-dfR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="bko-bH-3iO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="avp-HK-dfR" secondAttribute="trailing" constant="16" id="gKq-vS-KlY"/>
+                            <constraint firstItem="iCe-KB-JSc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="150" id="vel-cN-yXQ"/>
                         </constraints>
                     </view>
                     <connections>

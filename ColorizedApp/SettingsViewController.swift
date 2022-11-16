@@ -21,13 +21,16 @@ class SettingsViewController: UIViewController {
     @IBOutlet var blueSlider: UISlider!
     
     var color: UIColor!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
      
         colorView.layer.cornerRadius = 15
         colorView.backgroundColor = color
-        //setColor()
+        
+        redSlider.value = Float(color.rgba.red)
+        greenSlider.value = Float(color.rgba.green)
+        blueSlider.value = Float(color.rgba.blue)
         
         setValue(for: redLabel, greenLabel, blueLabel)
     }
@@ -77,3 +80,14 @@ class SettingsViewController: UIViewController {
     
 }
 
+extension UIColor {
+    var rgba: (red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) {
+        var red: CGFloat = 0
+        var green: CGFloat = 0
+        var blue: CGFloat = 0
+        var alpha: CGFloat = 0
+        getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+
+        return (red, green, blue, alpha)
+    }
+}
